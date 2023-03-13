@@ -12,8 +12,8 @@ public class Buscar {
 	}
 
 	public static int buscaLinearRecursiva(int[] array, int num) {
-		if (iterador >= array.length) { // base case 1: chegou ao final do array
-			return 0; // elemento não encontrado
+		if (iterador >= array.length) { 
+			return 0; 
 		} else if (array[iterador] == num)
 			return 1;
 		else {
@@ -41,16 +41,16 @@ public class Buscar {
 	}
 
 	public static int buscaBinariaRecursiva(int[] array, int num, int esquerda, int direita) {
-		if (esquerda > direita) { // base case: elemento não encontrado
+		if (esquerda > direita) { 
 			return 0;
 		}
 
 		int meio = (esquerda + direita) / 2;
-		if (array[meio] == num) { // base case: elemento encontrado
+		if (array[meio] == num) { 
 			return 1;
-		} else if (array[meio] < num) { // caso recursivo 1: procurar na metade direita do array
+		} else if (array[meio] < num) {
 			return buscaBinariaRecursiva(array, num, meio + 1, direita);
-		} else { // caso recursivo 2: procurar na metade esquerda do array
+		} else { 
 			return buscaBinariaRecursiva(array, num, esquerda, meio - 1);
 		}
 	}
