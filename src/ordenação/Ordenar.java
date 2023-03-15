@@ -39,14 +39,14 @@ public class Ordenar {
 	public static int[] selectionSort(int array[]) {
 		
 		for(int i=0;i<array.length-1;i++) {
-			int menor = i;
+			int indexMenor = i;
 			for (int j = i + 1; j < array.length; j++)
-				if (array[j] < array[menor])
-					menor = j;
+				if (array[j] < array[indexMenor])
+					indexMenor = j;
 			
 			int aux = array[i];
-			array[i] = array[menor];
-			array[menor] = aux;
+			array[i] = array[indexMenor];
+			array[indexMenor] = aux;
 		}
 		return array;
 		
