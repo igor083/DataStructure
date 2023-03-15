@@ -19,7 +19,8 @@ public class Program {
 		
 		//ordenação
 		printArray(Ordenar.bubbleSort(arrayD));
-		printArray(Ordenar.insertioSort(arrayD));
+		printArray(Ordenar.insertionSort(arrayD));
+		printArray(Ordenar.selectionSort(arrayD));
 		
 	}
 	public static void printArray(int array[]) {

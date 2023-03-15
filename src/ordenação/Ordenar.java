@@ -23,7 +23,7 @@ public class Ordenar {
 		
 	}
 	
-	public static int[] insertioSort(int[] array) {
+	public static int[] insertionSort(int[] array) {
 		 int n = array.length;  
 	        for (int j = 1; j < n; j++) {  
 	            int i = j-1;  
@@ -35,4 +35,23 @@ public class Ordenar {
 	        }  
 	        return array;
 	    }  
+	
+	public static int[] selectionSort(int array[]) {
+		
+		for(int i=0;i<array.length-1;i++) {
+			int menor = i;
+			for (int j = i + 1; j < array.length; j++)
+				if (array[j] < array[menor])
+					menor = j;
+			
+			int aux = array[i];
+			array[i] = array[menor];
+			array[menor] = aux;
+		}
+		return array;
+		
+	}
+	
+	
+	
 	}
