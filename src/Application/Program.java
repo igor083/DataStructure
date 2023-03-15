@@ -19,6 +19,7 @@ public class Program {
 		
 		//ordenação
 		printArray(Ordenar.bubbleSort(arrayD));
+		printArray(Ordenar.insertioSort(arrayD));
 		
 	}
 	public static void printArray(int array[]) {
@@ -26,7 +27,7 @@ public class Program {
 		for(int num:array) {
 			System.out.print(num);
 			System.out.print(",");
-		}System.out.print("}");
+		}System.out.print("}\n");
 	}
 
 }
